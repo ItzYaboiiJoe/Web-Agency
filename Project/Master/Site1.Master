@@ -1,0 +1,136 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="Project.Master.Site1" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <title></title>
+    <link href="../StyleSheet/style.css" rel="stylesheet" type="text/css" />
+    <link href="../StyleSheet/responsive.css" rel="stylesheet" type="text/css" />
+    <link href="../StyleSheet/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,700&display=swap" rel="stylesheet">
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="hero_area">
+            <!-- header section starts -->
+            <header class="header_section">
+                <div class="container-fluid">
+                    <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
+                        <a class="navbar-brand" href="../Pages/default.aspx">
+                            <span>Web Design</span>
+                        </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item active">
+                                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">About</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">What I do</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Contact Me</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </header>
+            <!-- end header section -->
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+
+            <!-- info section -->
+            <section class="info_section">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-md-3">
+                            <div class="info_contact">
+                                <h5>About Shop</h5>
+                                <div>
+                                    <div class="img-box">
+                                        <img src="../images/location-white.png" width="18px" alt="">
+                                    </div>
+                                    <p>Address</p>
+                                </div>
+                                <div>
+                                    <div class="img-box">
+                                        <img src="../images/telephone-white.png" width="12px" alt="">
+                                    </div>
+                                    <p>+01 1234567890</p>
+                                </div>
+                                <div>
+                                    <div class="img-box">
+                                        <img src="../images/envelope-white.png" width="18px" alt="">
+                                    </div>
+                                    <p>demo@gmail.com</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="info_info">
+                                <h5>Informations</h5>
+                                <p>ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="info_form">
+                                <h5>Newsletter</h5>
+                                <form action="">
+                                    <input type="email" placeholder="Enter your email">
+                                    <button>Subscribe</button>
+                                </form>
+                                <div class="social_box">
+                                    <a href="#">
+                                        <img src="../images/fb.png" alt="">
+                                    </a>
+                                    <a href="#">
+                                        <img src="../images/twitter.png" alt="">
+                                    </a>
+                                    <a href="#">
+                                        <img src="../images/linkedin.png" alt="">
+                                    </a>
+                                    <a href="#">
+                                        <img src="../images/youtube.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- end info section -->
+
+            <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+            <!-- Bootstrap JS -->
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+            <!-- Owl Carousel JS -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+            <script type="text/javascript">
+                $(document).ready(function () {
+                    $(".owl-carousel").owlCarousel({
+                        items: 3,
+                        loop: true,
+                        margin: 10,
+                        nav: true,
+                        autoplay: true,
+                        autoplayTimeout: 3000,
+                        autoplayHoverPause: true
+                    });
+                });
+            </script>
+        </div>
+    </form>
+</body>
+</html>
